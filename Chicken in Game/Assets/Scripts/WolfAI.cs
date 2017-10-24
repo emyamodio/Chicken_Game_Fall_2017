@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class ChickenAI : MonoBehaviour {
+public class WolfAI : MonoBehaviour {
 	public Rigidbody enemy;
 	public float moveSpeed;
 	public Transform target;
@@ -13,8 +13,8 @@ public class ChickenAI : MonoBehaviour {
 	
 			Debug.Log("Player has entered chickens trigger");
 			transform.LookAt(target);
-			transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
-									//forward//
+			transform.Translate(Vector3.forward*moveSpeed*Time.deltaTime);
+									   //back//
 		}
 	}
 }
