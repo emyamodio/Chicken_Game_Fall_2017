@@ -7,6 +7,8 @@ public class ChickenAI : MonoBehaviour {
 	public float moveSpeed;
 	public Transform target;
 
+	public Transform chickenPen;
+
 	void OnTriggerStay(Collider other){
 
 		if(other.gameObject.name == "Player"){
@@ -15,6 +17,15 @@ public class ChickenAI : MonoBehaviour {
 			transform.LookAt(target);
 			transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
 									//forward//
+		}
+	}
+
+	void OnCollisionEnter(Collision other){
+		if(other.gameObject.name == "Player"){
+			/*Destroy(gomaObgject); */
+			// scoreManager.AddPoint(points);
+			transform.position = chickenPen.position;
+			transform.rotation = chickenPen.rotation;
 		}
 	}
 }
