@@ -716,6 +716,11 @@ Prefab:
       propertyPath: chickenPen
       value: 
       objectReference: {fileID: 693355630}
+    - target: {fileID: 114899697243205204, guid: ef3eadc06cda2b04aa3cd3dd3adab601,
+        type: 2}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef3eadc06cda2b04aa3cd3dd3adab601, type: 2}
   m_IsPrefabParent: 0

@@ -28,4 +28,22 @@ public class ChickenAI : MonoBehaviour {
 			transform.rotation = chickenPen.rotation;
 		}
 	}
+
+	float range;
+
+	void Start () {
+		range = 2f;
+		// target = GetTarget();
+	}
+
+ 
+  
+    void Update()
+	{
+		Debug.Log(moveSpeed);
+        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+		// Time.deltaTime * turnSpeed; 
+		float y = 0.20f;
+		transform.Rotate(0,y,0);
+    }
 }

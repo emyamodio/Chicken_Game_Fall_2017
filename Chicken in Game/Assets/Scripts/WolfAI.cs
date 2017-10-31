@@ -22,9 +22,9 @@ public class WolfAI : MonoBehaviour {
            
             randomDirection += origin;
            
-		    NavMeshHit navHit;
+		    UnityEngine.AI.NavMeshHit navHit;
                        
-            NavMesh.SamplePosition (randomDirection, out navHit, distance, layermask);
+            UnityEngine.AI.NavMesh.SamplePosition (randomDirection, out navHit, distance, layermask);
            
             return navHit.position;
         }
