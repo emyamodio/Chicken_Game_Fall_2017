@@ -6,8 +6,8 @@ public class ChickenAI : MonoBehaviour {
 	public Rigidbody enemy;
 	public float moveSpeed;
 	public Transform target;
-
 	public Transform chickenPen;
+	public int points = 100;
 
 	void OnTriggerStay(Collider other){
 
@@ -23,9 +23,11 @@ public class ChickenAI : MonoBehaviour {
 	void OnCollisionEnter(Collision other){
 		if(other.gameObject.name == "Player"){
 			/*Destroy(gomaObgject); */
-			// scoreManager.AddPoint(points);
+			ScoreManager.AddPoints(points);
 			transform.position = chickenPen.position;
 			transform.rotation = chickenPen.rotation;
+
+
 		}
 	}
 

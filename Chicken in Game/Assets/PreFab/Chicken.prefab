@@ -135,6 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  moveSpeed: 5
+  moveSpeed: 8
   target: {fileID: 0}
   chickenPen: {fileID: 0}
