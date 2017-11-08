@@ -36,6 +36,7 @@ public class ChickenAI : MonoBehaviour {
 	void Start () {
 		range = 2f;
 		// target = GetTarget();
+		// transform.rotation = new Quaternion(transform.rotation.x,Random.Range(-180,180),transform.rotation.z,transform.rotation.w);
 	}
 
  
@@ -45,7 +46,9 @@ public class ChickenAI : MonoBehaviour {
 		Debug.Log(moveSpeed);
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 		// Time.deltaTime * turnSpeed; 
-		float y = 0.20f;
-		transform.Rotate(0,y,0);
+		
+	transform.Rotate(0,Random.Range(-180,180) * Time.deltaTime,0);
+	
+
     }
 }
