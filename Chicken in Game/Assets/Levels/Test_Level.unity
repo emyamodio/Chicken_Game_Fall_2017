@@ -186,14 +186,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113918887}
-  m_LocalRotation: {x: -0, y: -0.76429313, z: -0, w: -0.644869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -95, y: 0.989, z: -92.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 829174304}
+  - {fileID: 1498643312}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -260.312, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &113918892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,6 +831,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &382462355
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -95.671
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.8298912
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -91.716
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163968428911942, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367980409416968, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5c091c98668594e4a80c0b70849f5523, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &423577923
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2205,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef3eadc06cda2b04aa3cd3dd3adab601, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1498643311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1498643312}
+  - component: {fileID: 1498643313}
+  m_Layer: 0
+  m_Name: Shooter
+  m_TagString: Untagged
+  m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1498643312
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498643311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.64, y: -0.19, z: 0.5}
+  m_LocalScale: {x: 38.682518, y: 17.788855, z: 33.50538}
+  m_Children: []
+  m_Father: {fileID: 113918891}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498643313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1498643311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebab4cbc5db4b7d498635a345fa8626f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 54596644208807580, guid: 5c091c98668594e4a80c0b70849f5523,
+    type: 2}
+  shootPoint: {fileID: 1498643312}
+  shootSpeed: 75
 --- !u!1 &1669009846
 GameObject:
   m_ObjectHideFlags: 0
