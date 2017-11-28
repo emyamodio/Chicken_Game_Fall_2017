@@ -11,6 +11,10 @@ public class wolfHealth : MonoBehaviour {
 
 	public int points;
 
+	void Start(){
+		currentHealth = maxHealth;	
+	}
+
 	// Use this for initialization
 	public void TakeDamage (int amount) {
 		currentHealth -=amount;
