@@ -8,6 +8,11 @@ public class playerHealth : MonoBehaviour {
 	public int currentHealth = maxHealth;
 	public Text hp;
 	public Text maxHP;
+
+	void Start () {
+		hp = hp.GetComponent<Text>();
+		maxHP = maxHP.GetComponent<Text>();
+	}
 		
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +24,7 @@ public class playerHealth : MonoBehaviour {
 		currentHealth -= amount;
 		if(currentHealth<= 0){
 			 currentHealth=0;
-			 print("ypure desd! Game Over");
+			 print("you're dead! Game Over");
 
 
 		}
