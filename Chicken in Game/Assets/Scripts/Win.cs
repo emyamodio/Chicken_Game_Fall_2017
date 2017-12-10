@@ -19,8 +19,8 @@ public class win : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         currentScore = scoreManager.gameObject.GetComponentInChildren<ScoreManager>().scoreAmount;
-        
-        if (currentScore ==winScore){
+        Debug.Log(currentScore + " - " + winScore + " - " + (currentScore >= winScore));
+        if (currentScore >= winScore){
 			print("Current Score ="+ currentScore);
             winText.GetComponent<Text>().enabled = true;    
         }

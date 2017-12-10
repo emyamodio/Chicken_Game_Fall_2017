@@ -26,7 +26,14 @@ public class playerHealth : MonoBehaviour {
 			 currentHealth=0;
 			 print("you're dead! Game Over");
 
+		}
+	
+	if(currentHealth == 0){
+		/*Destroy(gomaObgject); */
+		ScoreManager.AddPoints(0);
 
 		}
 	}
+
 }
+		

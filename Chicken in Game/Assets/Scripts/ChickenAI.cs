@@ -43,7 +43,7 @@ public class ChickenAI : MonoBehaviour {
   
     void Update()
 	{
-		Debug.Log(moveSpeed);
+		// Debug.Log(moveSpeed);
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
 		// Time.deltaTime * turnSpeed; 
 		

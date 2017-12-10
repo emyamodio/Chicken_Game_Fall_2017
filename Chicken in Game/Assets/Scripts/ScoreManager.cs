@@ -32,13 +32,13 @@ score = 0;
 
 text.text = " " + score;
 
-if (winScore == score){
+if (winScore <= score){
     print("Win Score Reached = " + score);
     winText.GetComponent<Text>().enabled = true; 
     Time.timeScale = 0; 
 }
 
-if(Input.GetKeyDown("Esc")){
+if(Input.GetKeyDown("escape")){
     SceneManager.LoadScene(0);
     }
 }
@@ -50,5 +50,7 @@ score += pointsToAdd;
 public void Reset(){
 score = 0;
     }
-
+    
 }
+
+
