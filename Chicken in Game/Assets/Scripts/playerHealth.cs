@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class playerHealth : MonoBehaviour {
 
-	public const int maxHealth = 10;
+	public const int maxHealth = 50;
 	public int currentHealth = maxHealth;
 	public Text hp;
 	public Text maxHP;
@@ -25,6 +26,8 @@ public class playerHealth : MonoBehaviour {
 		if(currentHealth<= 0){
 			 currentHealth=0;
 			 print("you're dead! Game Over");
+
+	SceneManager.LoadScene(0);
 
 		}
 	

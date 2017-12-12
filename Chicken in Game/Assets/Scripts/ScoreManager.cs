@@ -15,6 +15,10 @@ public int winScore;
 
 public Text winText;
 
+public static int chickenCapture = 0;
+
+public int chickenScore = 8;
+
 void Awake(){
     Time.timeScale = 1;
 }
@@ -38,6 +42,13 @@ if (winScore <= score){
     Time.timeScale = 0; 
 }
 
+
+if (chickenScore <= chickenCapture){
+    print("All Chicken capture = " + chickenCapture);
+    winText.GetComponent<Text>().enabled = true; 
+    Time.timeScale = 0; 
+}
+
 if(Input.GetKeyDown("escape")){
     SceneManager.LoadScene(0);
     }
@@ -50,7 +61,10 @@ score += pointsToAdd;
 public void Reset(){
 score = 0;
     }
-    
+
+public static void Count(){
+    Debug.Log("Chickens" + chickenCapture);
+    chickenCapture = chickenCapture + 1;  
+
+    }
 }
-
-

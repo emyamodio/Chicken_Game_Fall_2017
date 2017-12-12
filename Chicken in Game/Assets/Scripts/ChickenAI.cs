@@ -14,9 +14,11 @@ public class ChickenAI : MonoBehaviour {
 		if(other.gameObject.name == "Player"){
 	
 			Debug.Log("Player has entered chickens trigger");
-			transform.LookAt(target);
+			transform.LookAt(2 * other.gameObject.transform.position - transform.position);
 			transform.Translate(Vector3.back*moveSpeed*Time.deltaTime);
 									//forward//
+				
+	
 		}
 	}
 
@@ -26,6 +28,7 @@ public class ChickenAI : MonoBehaviour {
 			ScoreManager.AddPoints(points);
 			transform.position = chickenPen.position;
 			transform.rotation = chickenPen.rotation;
+			ScoreManager.Count();
 
 
 		}
@@ -41,14 +44,14 @@ public class ChickenAI : MonoBehaviour {
 
  
   
-    void Update()
-	{
-		// Debug.Log(moveSpeed);
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-		// Time.deltaTime * turnSpeed; 
+    // void Update()
+	// {
+	// 	// Debug.Log(moveSpeed);
+    //     transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+	// 	// Time.deltaTime * turnSpeed; 
 		
-	transform.Rotate(0,Random.Range(-180,180) * Time.deltaTime,0);
+	// transform.Rotate(0,Random.Range(-180,180) * Time.deltaTime,0);
 	
 
-    }
+    // }
 }
